@@ -1,0 +1,408 @@
+*{
+  margin: 0;
+}
+html {
+  overflow-x: hidden;
+}
+
+body,
+ul {
+
+  margin: 0;
+  padding: 0;
+}
+
+.foto {
+  background-image: url('../imagens/fundo_header.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+a {
+  color: #e4e3e3;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+a:hover {
+  background-color: rgba(0, 0, 0, .35);
+}
+
+#logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 1.5em;
+}
+
+#header {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  padding: 1rem;
+  justify-content: space-between;
+  background-color: #45444470;
+
+}
+
+nav {
+  margin-right: 1.5rem;
+}
+
+#menu {
+  display: flex;
+  list-style: none;
+
+  margin-right: 1em;
+
+}
+
+#menu a {
+  display: block;
+  padding: .5rem;
+}
+
+#btn-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #btn-mobile {
+    display: block;
+  }
+
+  #logo {
+    margin-left: 0.5em;
+  }
+
+  #menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    right: -15px;
+    background-color: #ffffff57;
+    z-index: 1000;
+    transition: .6s;
+    height: 0;
+    visibility: hidden;
+    overflow-y: hidden;
+
+  }
+  nav{
+    margin-right: 0.5em;
+  }
+
+  #nav.active #menu {
+    height: calc(100vh - 70px);
+    visibility: visible;
+    overflow-y: auto;
+  }
+
+  #menu a {
+    color: rgb(0, 0, 0);
+    padding: 1rem 0;
+    margin-left: -15px;
+    border-bottom: 2px solid rgba(76, 71, 71, 0.553);
+
+  }
+
+  #btn-mobile {
+    display: flex;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: .5rem;
+  }
+
+  #hamburguer {
+    width: 20px;
+    border-top: 2px solid;
+  }
+
+  #hamburguer::after,
+  #hamburguer::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: currentColor;
+    margin-top: 5px;
+    transition: .3s;
+    position: relative;
+  }
+
+  #nav.active #hamburguer {
+    border-top-color: transparent;
+  }
+
+  #nav.active #hamburguer::before {
+    transform: rotate(135deg);
+  }
+
+  #nav.active #hamburguer::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+}
+
+/* ---INICIO CONTEUDO PRINCIPAL <MAIN>----  */
+section {
+  border-top: 1px solid #000000;
+  border-radius: 2px;
+}
+
+section h1 {
+  text-align: center;
+  font-size: 2em;
+  margin-top: 1em;
+  text-decoration: underline #FFD700;
+}
+
+.sobre-mim {
+  display: flex;
+  justify-content: center;
+  gap: 3em;
+  border-radius: 5px;
+  margin-top: 3em;
+}
+
+.imagem {
+  width: 21.2em;
+  height: 12em;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.texto {
+  width: 55%;
+}
+
+
+@media (max-width: 768px) {
+  .sobre-mim {
+    flex-direction: column;
+  }
+
+  .imagem,
+  .texto,
+  img {
+    width: 100%;
+  }
+}
+
+h2 {
+  color: #333;
+  font-size: 24px;
+}
+
+p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .foto {
+    background-position: center;
+
+  }
+
+  main {
+    display: block;
+
+  }
+
+  .hello {
+    width: 100vw;
+  }
+
+  .descricao {
+    width: 100vw;
+    text-align: left;
+
+  }
+}
+
+/*----INICIO PERFIL-----*/
+.container {
+  display: flex;
+  margin-top: 4em;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 3em;
+
+}
+
+.item {
+  padding: 10px;
+  width: 250px;
+  height: 350px;
+  border-radius: 3px;
+  border: 1px solid #9ab1aa;
+  max-width: 100%;
+  -moz-transition: all 2s;
+  /* Aumente o tempo aqui */
+  -webkit-transition: all 2s;
+  /* Aumente o tempo aqui */
+  transition: all 2s;
+  /* Aumente o tempo aqui */
+}
+
+.item img {
+  border-radius: 5px;
+  width: 250px;
+  height: 300px;
+
+}
+
+.item:hover {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  opacity: 0.4;
+}
+
+/* CSS   ModAL*/
+/* CSS   ModAL*/
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 2px solid rgb(153, 217, 140);
+  border-radius: 10px;
+  width: 50%;
+  height: 60%;
+  /* Adicionei as linhas abaixo para criar o efeito de luz */
+  position: relative;
+  /* Para posicionar o ponto de luz */
+  overflow: hidden;
+  /* Para esconder o ponto de luz fora da borda */
+}
+
+/* Ponto de luz */
+.modal-content::after {
+  content: "";
+  /* Elemento vazio */
+  position: absolute;
+  /* Posicionado em relação ao modal */
+  top: -10px;
+  /* Posição inicial no topo */
+  left: -10px;
+  /* Posição inicial na esquerda */
+  width: 15px;
+  /* Largura do ponto de luz */
+  height: 15px;
+  /* Altura do ponto de luz */
+  border-radius: 50%;
+  /* Forma circular */
+  background-color: rgba(0, 255, 191, 0.687);
+  /* Cor azul */
+  box-shadow: 0 0 10px rgb(0, 153, 255);
+  /* Sombra azul */
+  animation: light 10s linear infinite;
+  /* Animação do ponto de luz */
+}
+
+/* Animação do ponto de luz */
+@keyframes light {
+  0% {
+    top: -10px;
+    left: -10px;
+  }
+
+  25% {
+    top: -10px;
+    left: calc(50% - 10px);
+  }
+
+  50% {
+    top: -10px;
+    left: calc(100% - 10px);
+  }
+
+  75% {
+    top: calc(100% - 10px);
+    left: calc(100% - 10px);
+  }
+
+  100% {
+    top: calc(100% - 10px);
+    left: -10px;
+  }
+}
+
+
+ul li {
+  margin-left: 2em;
+  padding: 0.3em;
+}
+
+.habilidades a {
+  color: rgba(0, 255, 191, 0.687);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.formacoes li a {
+  color: rgba(0, 255, 191, 0.687);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+footer{
+  display: flex;
+  justify-content: center;
+  background-image: url('../imagens/objetivos.jpg');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 7em;
+  margin-top: 2em;
+  color: #ffffff;
+  align-items: center;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <title>Curriculo</title>
+</head>
+
+<body>
+    <div class="foto">
+        <header id="header">
+            <a id="logo" href="index.html">Valdoir Junior</a>
+            <nav id="nav">
+                <button aria-label="Abrir menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
+                    aria-expanded="false">
+                    <span id="hamburguer"></span>
+                </button>
+                <ul id="menu" role="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="https://github.com/Junior-Schons">Git Hub</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="contatos.html">Contatos</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <section>
+        <h1>Sobre Mim</h1>
+        <div class="sobre-mim">
+            <div class="imagem">
+                <img src="./assets/imagens/hello-world.jpg.jpg" alt="Imagem descritiva">
+            </div>
+            <div class="texto">
+                <h2>Início na programação</h2>
+                <p>Desde a infância apaixonado por tecnologia e Games, comecei aprender programação com a vontade de
+                    criar jogos, durante meu aprendizado conheci desenvolvimento web e todo o mundo e possibilidades que
+                    ele trazia e assim começou a minha jornada nesse mundo da programação.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container">
+        <div class="item" onclick="modal1()">
+            <img src="./assets/imagens/habilidades.jpg" alt="Imagem Conquistas">
+            <p>Minhas habilidades</p>
+        </div>
+        <div class="item" onclick="modal2()">
+            <img src="./assets/imagens/cursos.jpg" alt="Imagem ">
+            <p>Minhas formações</p>
+        </div>
+        <div class="item" onclick="modal3()">
+            <img src="./assets/imagens/objetivos.jpg" alt="Imagem Objetivos">
+            <p>Meus objetivos</p>
+        </div>
+    </div>
+    <!-- DIV MODAL -->
+
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <ul class="habilidades">
+                <h3>Hard Skills</h3>
+                <li>Desenvolvimento web: HTML, CSS, Javascript, PHP.</li>
+                <li>Frameworks: Node.js, React.js, Ionic,</li>
+                <li>Ingles: Iniciante</li>
+                <li><a href="https://github.com/Junior-Schons">Github</a></li>
+                <h3>Soft Skills</h3>
+                <li>Comunicação: Realizo treinamentos de novos colaboradores, passo as orientações à equipe</li>
+                <li>Gestão: Organizo, executo e controlo as atividades, recursos e processos, visando a melhoria
+                    contínua e a eficiência operacional</li>
+                <li>Aprendizagem: busco novos conhecimentos, atualizo-me constantemente, aplico o que aprendi na prática
+                    e ensino aos outros.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="myModal2" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <ul class="formacoes">
+                <h3>Formação academica:</h3>
+                <li>Analise e desenvolvimento de sistemas - <strong>2020</strong></li>
+                <li>MBE Gestão da tecnologia da informação - <strong>cursando</strong></li>
+                <h3>Cursos:</h3>
+                <li>Desenvolvedor Node.js - <strong>2022</strong></li>
+                <li>Desenvolvedor full stack: Javascript, PHP, jQuery, MySql, Ionic. - <strong>cursando</strong></li>
+                <li>Curso React.js - <strong>cursando</strong></li>
+                <li><a href="https://www.linkedin.com/in/valdoir-schons-junior-2653b1259/">Perfil linkedin</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="myModal3" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h3>Objetivos:</h3>
+            <p>
+                 Durante a pandemia me mudei para a cidade de Chapecó com o objetivo de trabalhar na área, mas naquele
+                momento a oportunidade não surgiu. Acabei indo para a área da indústria, onde tive a oportunidade de
+                crescer como profissional, principalmente na minha comunicação, onde eu tinha dificuldade. Por isso
+                estou fazendo um MBA em Gestão da Tecnologia da Informação, buscando uma oportunidade como programador
+                ou analista de sistemas. O meu sonho é fazer parte de uma empresa de tecnologia que me desafie e me
+                ensine a criar soluções inovadoras para os problemas do mundo.
+            </p>
+
+        </div>
+    </div>
+    <footer>
+        <div>
+            <h1>Portfolio Junior Schons</h1>
+            <h3>Projetos pessoais e de cursos  <span id="ano"></span></h3>
+        </div>
+    </footer>
+
+    <script src="./javascript/index.js"></script>
+</body>
+
+</html>
