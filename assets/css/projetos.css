@@ -164,33 +164,30 @@ main {
     color: #000000;
 }
 
-main .center {
-    display: flex;
-    flex-direction: column;
+.center {
+  margin: 5em;
+   
 }
 
 .card {
     display: flex;
-    justify-content: space-around;
+    justify-content:space-evenly;
+    gap: 5em;
     align-items: center;
     justify-items: center;
-    flex-wrap: wrap;
-    gap: 1.5em;
     margin-top: 2em;
-    width: 70em;
     border-bottom: 1px solid #1a1a1c61;
-
+   
 }
 
 .imgPro {
-    height: 20em;
-    width: 30em;
     border-radius: 10px;
 }
 
+
 article {
     width: 30em;
-    height: 20em;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 article a {
@@ -201,6 +198,20 @@ article a {
 
 article a:hover {
     box-shadow: #2bea00;
+}
+@media (max-width: 768px) {
+    .card{
+        display: flex;
+        flex-direction: column;
+        max-width: 20em;
+        gap: 1em;
+    }
+    .imgPro{
+        max-width: 20em;
+    }
+    article{
+        max-width: 20em;
+    }
 }
 
 footer{
